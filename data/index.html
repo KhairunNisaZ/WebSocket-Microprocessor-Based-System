@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ESP IOT DASHBOARD</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+			integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+			crossorigin="anonymous" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="style.css" />
+		<script src="http://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-slate-900 text-slate-200 pb-20 md:pb-0">
+		<div
+			class="sticky top-0 backdrop-blur-sm py-10 px-4 bg-slate-600/50 md:bg-slate-500/20 outline outline-1 outline-slate-500/75 rounded-b-2xl space-y-2">
+			<h1 class="text-3xl font-semibold">
+				Temperature and Humidity Sensors Reader
+			</h1>
+			<h2>Microcontroller Teammate Project <br/>
+				Fio Mel Nathany (21/473580/TK/52199) <br/>
+				Khairun Nisa' Zuqri (21/473354/TK/52162) <br/>
+				Petrus Aria C R (21/480757/TK/53050)
+			</h2>
+		</div>
+		<div
+			class="flex flex-col md:flex-row py-10 items-center space-y-10 md:justify-center md:space-x-10">
+			<div
+				class="bg-slate-500/20 rounded-2xl flex flex-col items-center w-max p-5 outline outline-1 outline-slate-500/75 shadow-xl">
+				<p class="">Temperature</p>
+				<canvas
+					id="gauge-temperature"
+					class="border border-red-500 rounded-lg"></canvas>
+			</div>
+			<div
+				class="bg-slate-500/20 rounded-2xl flex flex-col items-center w-max p-5 outline outline-1 outline-slate-500/75 shadow-xl">
+				<p class="">Humidity</p>
+				<canvas id="gauge-humidity"></canvas>
+			</div>
+			<div
+				class="bg-slate-500/20 rounded-2xl flex flex-col items-center w-max p-5 outline outline-1 outline-slate-500/75 shadow-xl">
+				<p class="">Potentiometer</p>
+				<canvas id="gauge-pot"></canvas>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
